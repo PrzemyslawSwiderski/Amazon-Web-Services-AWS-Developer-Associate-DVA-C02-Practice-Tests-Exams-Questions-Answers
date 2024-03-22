@@ -49,7 +49,7 @@
 4. Questions are similar to the actual exam, without duplications (like in other courses ;-)).
 5. The Practice Tests Exams simulate the actual exam's content, timing, and percentage required to pass the exam.
 6. This course is **not** an Amazon Web Services Certified (AWS Certified) Developer Associate (DVA-C02) Exam Dump. Some people use brain dumps or exam dumps, but that's absurd, which we don't practice.
-7. 387 **unique** questions.
+7. 386 **unique** questions.
 
 ## ☝️ Course Updates
 
@@ -120,7 +120,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 | 16  | [The development team is working on an API that will be served from Amazon API gateway. The API will be served from three environments: development, test, and production. The API Gateway is configured to use 237 GB of cache in all three stages. Which is the MOST cost-efficient deployment strategy?](#the-development-team-is-working-on-an-api-that-will-be-served-from-amazon-api-gateway-the-api-will-be-served-from-three-environments-development-test-and-production-the-api-gateway-is-configured-to-use-237-gb-of-cache-in-all-three-stages-which-is-the-most-cost-efficient-deployment-strategy)
 | 17  | [A company is migrating its on-premises database to Amazon RDS for MySQL. The company has read-heavy workloads, and wants to make sure it re-factors its code to achieve optimum read performance for its queries. How can this objective be met?](#a-company-is-migrating-its-on-premises-database-to-amazon-rds-for-mysql-the-company-has-read-heavy-workloads-and-wants-to-make-sure-it-re-factors-its-code-to-achieve-optimum-read-performance-for-its-queries-how-can-this-objective-be-met)
 | 18  | [A developer needs to modify an application architecture to meet new functional requirements. Application data is stored in Amazon DynamoDB and processed for analysis in a rightly batch. The system analysts do not want to wait unit the next day to view the processed data and have asked to have it available in near-real time. Which application architect pattern would enables the data to be processed as it is received?](#a-developer-needs-to-modify-an-application-architecture-to-meet-new-functional-requirements-application-data-is-stored-in-amazon-dynamodb-and-processed-for-analysis-in-a-rightly-batch-the-system-analysts-do-not-want-to-wait-unit-the-next-day-to-view-the-processed-data-and-have-asked-to-have-it-available-in-near-real-time-which-application-architect-pattern-would-enables-the-data-to-be-processed-as-it-is-received)
-| 19  | [You are developing an HTTP API hosted on a Compute Engine virtual machine instance that needs to be invoked by multiple clients within the same Virtual Private Cloud (VPC). You want clients to be able to get the IP address of the service. What should you do?](#you-are-developing-an-http-api-hosted-on-a-compute-engine-virtual-machine-instance-that-needs-to-be-invoked-by-multiple-clients-within-the-same-virtual-private-cloud-vpc-you-want-clients-to-be-able-to-get-the-ip-address-of-the-service-what-should-you-do)
+| 19  | [PLACEHOLDER 2](#placeholder-2)
 | 20  | [A software company needs to make sure user-uploaded documents are securely stored in Amazon S3. The documents must be encrypted at rest in Amazon S3. The company does not want to manage the security infrastructure in-house, but the company still needs extra protection to ensure it has control over its encryption keys due to industry regulations. Which encryption strategy should a developer use to meet these requirements?](#a-software-company-needs-to-make-sure-user-uploaded-documents-are-securely-stored-in-amazon-s3-the-documents-must-be-encrypted-at-rest-in-amazon-s3-the-company-does-not-want-to-manage-the-security-infrastructure-in-house-but-the-company-still-needs-extra-protection-to-ensure-it-has-control-over-its-encryption-keys-due-to-industry-regulations-which-encryption-strategy-should-a-developer-use-to-meet-these-requirements)
 | 21  | [An application uses Amazon Kinesis Data Streams to ingest and process large streams of data records in real time. Amazon EC2 instances consume and process the data from the shards of the Kinesis data stream by using Amazon Kinesis Client Library (KCL). The application handles the failure scenarios and does not require standby workers. The application reports that a specific shard is receiving more data than expected. To adapt to the changes in the rate of data flow, the 'hot' shard is resharded. Assuming that the initial number of shards in the Kinesis data stream is 4, and after resharding the number of shards increased to 6, what is the maximum number of EC2 instances that can be deployed to process data from all the shards?](#an-application-uses-amazon-kinesis-data-streams-to-ingest-and-process-large-streams-of-data-records-in-real-time-amazon-ec2-instances-consume-and-process-the-data-from-the-shards-of-the-kinesis-data-stream-by-using-amazon-kinesis-client-library-kcl-the-application-handles-the-failure-scenarios-and-does-not-require-standby-workers-the-application-reports-that-a-specific-shard-is-receiving-more-data-than-expected-to-adapt-to-the-changes-in-the-rate-of-data-flow-the-hot-shard-is-resharded-assuming-that-the-initial-number-of-shards-in-the-kinesis-data-stream-is-4-and-after-resharding-the-number-of-shards-increased-to-6-what-is-the-maximum-number-of-ec2-instances-that-can-be-deployed-to-process-data-from-all-the-shards)
 | 22  | [A gaming company is developing a mobile game application for iOS® and Android® platforms. This mobile game securely stores user data locally on the device. The company wants to allow users to use multiple device for the game, which requires user data synchronization across device.Which service should be used to synchronize user data across devices without the need to create a backend application?](#a-gaming-company-is-developing-a-mobile-game-application-for-ios-and-android-platforms-this-mobile-game-securely-stores-user-data-locally-on-the-device-the-company-wants-to-allow-users-to-use-multiple-device-for-the-game-which-requires-user-data-synchronization-across-devicewhich-service-should-be-used-to-synchronize-user-data-across-devices-without-the-need-to-create-a-backend-application)
@@ -169,7 +169,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 | 65  | [A current architecture uses many Lambda functions invoking one another as large state machine. The coordination of this state machine is legacy custom code that breaks easily. Which AWS Service can help refactor and manage the state machine?](#a-current-architecture-uses-many-lambda-functions-invoking-one-another-as-large-state-machine-the-coordination-of-this-state-machine-is-legacy-custom-code-that-breaks-easily-which-aws-service-can-help-refactor-and-manage-the-state-machine)
 | 66  | [A company is developing a new online game that will run on top of Amazon ECS. Four distinct Amazon ECS services will be part of the architecture, each requiring specific permissions to various AWS services. The company wants to optimize the use of the underlying Amazon EC2 instances by bin packing the containers based on memory reservation. Which configuration would allow the Development team to meet these requirements MOST securely?](#a-company-is-developing-a-new-online-game-that-will-run-on-top-of-amazon-ecs-four-distinct-amazon-ecs-services-will-be-part-of-the-architecture-each-requiring-specific-permissions-to-various-aws-services-the-company-wants-to-optimize-the-use-of-the-underlying-amazon-ec2-instances-by-bin-packing-the-containers-based-on-memory-reservation-which-configuration-would-allow-the-development-team-to-meet-these-requirements-most-securely)
 | 67  | [A Developer must re-implement the business logic for an order fulfilment system. The business logic has to make requests to multiple vendors to decide where to purchase an item. The whole process can take up to a week to complete. What is the MOST efficient and SIMPLEST way to implement a system that meets these requirements?](#a-developer-must-re-implement-the-business-logic-for-an-order-fulfilment-system-the-business-logic-has-to-make-requests-to-multiple-vendors-to-decide-where-to-purchase-an-item-the-whole-process-can-take-up-to-a-week-to-complete-what-is-the-most-efficient-and-simplest-way-to-implement-a-system-that-meets-these-requirements)
-| 68  | [What best practice should first be applied to address this issue?](#what-best-practice-should-first-be-applied-to-address-this-issue)
+| 68  | [PLACEHOLDER](#placeholder)
 | 69  | [A Developer is receiving HTTP 400: ThrottlingException errors intermittently when calling the Amazon CloudWatch API. When a call fails, no data is retrieved. What best practice should first be applied to address this issue?](#a-developer-is-receiving-http-400-throttlingexception-errors-intermittently-when-calling-the-amazon-cloudwatch-api-when-a-call-fails-no-data-is-retrieved-what-best-practice-should-first-be-applied-to-address-this-issue)
 | 70  | [An application is real-time processing millions of events that are received through an API. What service could be used to allow multiple consumers to process the data concurrently and MOST cost-effectively?](#an-application-is-real-time-processing-millions-of-events-that-are-received-through-an-api-what-service-could-be-used-to-allow-multiple-consumers-to-process-the-data-concurrently-and-most-cost-effectively)
 | 71  | [Where should the appspec.yml file be placed in order for AWS CodeDeploy to work?](#where-should-the-appspecyml-file-be-placed-in-order-for-aws-codedeploy-to-work)
@@ -656,13 +656,12 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### You are developing an HTTP API hosted on a Compute Engine virtual machine instance that needs to be invoked by multiple clients within the same Virtual Private Cloud (VPC). You want clients to be able to get the IP address of the service. What should you do?
+### PLACEHOLDER 2
 
-- [ ] Reserve a static external IP address and assign it to an HTTP(S) load balancing service's forwarding rule. Clients should use this IP address to connect to the service.
-- [ ] Reserve a static external IP address and assign it to an HTTP(S) load balancing service's forwarding rule. Then, define an A record in Cloud DNS.
-- [ ] Clients should use the name of the A record to connect to the service.
-- [x] Ensure that clients use Compute Engine internal DNS by connecting to the instance name with the url https://[INSTANCE_NAME].[ZONE].c.[PROJECT_ID].internal/.
-- [ ] Ensure that clients use Compute Engine internal DNS by connecting to the instance name with the url https://[API_NAME]/[API_VERSION]/.
+- [ ] ...
+- [ ] ...
+- [ ] ...
+- [ ] ...
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -732,8 +731,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A development team is creating a new application designed to run on AWS. While the test and production environments will run on Amazon EC2 instances, developers will each run their own environment on their laptops. Which of the following is the simplest and MOST secure way to access AWS services from the local development machines?
 
-- [x] Use an IAM role to assume a role and execute API calls using the role.
-- [ ] Create an IAM user to be shared with the entire development team, provide the development team with the access key.
+- [ ] Use an IAM role to assume a role and execute API calls using the role.
+- [x] Create an IAM user to be shared with the entire development team, provide the development team with the access key.
 - [ ] Create an IAM user for each developer on the team: provide each developer with a unique access key.
 - [ ] Set up a federation through an Amazon Cognito user pool.
 
@@ -797,7 +796,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 **[⬆ Back to Top](#table-of-contents)**
 
-### cation and maintains different branches of code. The developer wants to avoid updating the Amazon API Gateway target endpoint each time a new code push is performed. What solution would allow the developer to perform a code push efficiently, without the need to update the API Gateway?
+### A developer is creating a serverless web application and maintains different branches of code. The developer wants to avoid updating the Amazon API Gateway target endpoint each time a new code push is performed. What solution would allow the developer to perform a code push efficiently, without the need to update the API Gateway?
 
 - [ ] Associate different AWS Lambda functions to an API Gateway target endpoint.
 - [ ] Create different stages in API Gateway, then associate API Gateway with aws Lambda.
@@ -809,9 +808,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### An application running on EC2 instances is storing data in an S3 bucket. Security policy mandates that all data must be encrypted in transit. How can the Developer ensure that all traffic to the S3 bucket is encrypted?
 
 - [ ] Install certificates on the EC2 instances.
-- [ ] Create a bucket policy that allows traffic where SecureTransport is true.
+- [x] Create a bucket policy that allows traffic where SecureTransport is true.
 - [ ] Create an HTTPS redirect on the EC2 instances.
-- [x] Create a bucket policy that denies traffic where SecureTransport is false.
+- [ ] Create a bucket policy that denies traffic where SecureTransport is false.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -863,11 +862,11 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A company stores all personally identifiable information (PII) in an Amazon DynamoDB table named PII in Account A. An application running on Amazon EC2 instances in Account B requires access to the PII table. An administrators in Account A created an IAM role named AccessPII with privileges to access the PII table, and made account B a trusted entity. Which combination of actional steps should Developers take to access the table? (Select TWO)
 
-- [ ] Ask an Administrator in Account B to allow the EC2 IAM role permission to assume the AccessPII role.
-- [x] Ask an Administrator in Account B to allow the EC2 IAM role permission to assume the AccessPII role with predefined service control policies.
-- [ ] Ask an Administrator in Account A to allow the EC2 IAM role permission to assume the AccessPII role with predefined service control policies.
-- [x] Include the AssumeRole API in the application code logic to obtain credentials to access the PII table.
-- [ ] Include the GetSession token API in the application code logic to obtain credentials to access the PII table.
+- [x] Allow the EC2 IAM role the permission to assume the AccessPII role.
+- [ ] Allow the EC2 IAM role the permission to access the PII table.
+- [ ] Include the AWS API in the application code logic to obtain temporary credentials from the EC2 IAM role to access the PII table.
+- [x] Include the AssumeRole API operation in the application code logic to obtain temporary credentials to access the PII table.
+- [ ] Include the GetSessionToken API operation in the application code logic to obtain temporary credentials to access the PII table.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -968,7 +967,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] The Lambda function has insufficient memory and needs to be increased to 1 GB to match the Amazon EC2 instance.
 - [ ] Files need to be copied to the same Amazon S3 bucket for processing, so the second bucket needs to be deleted.
-- [x] Lambda functions have a maximum execution limit of 300 seconds, therefore the function is not completing.
+- [x] Lambda functions have a maximum execution limit of 15 minutes, therefore the function is not completing.
 - [ ] There is a problem with the Java runtime for Lambda, and the function needs to be converted to node.js.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1647,8 +1646,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Copy the documents to a separate S3 bucket that has a lifecycle policy for deletion after 15 minutes.
 - [x] Create a presigned S3 URL using the AWS SDK with an expiration time of 15 minutes.
-- [ ] Create a presigned S3 URL using the AWS SDK with an expiration time of 15 minutes.
-- [ ] Create a presigned S3 URL using the AWS SDK with an expiration time of 15 minutes.
+- [ ] Use server-side encryption with AWS KMS managed keys (SSE-KMS) and download the documents using HTTPS.
+- [ ] Modify the S3 bucket policy to only allow specific users to download the documents. Revert the change after 15 minutes.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -1713,11 +1712,11 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A development team is designing a mobile app that requires multi-factor authentication. Which steps should be taken to achieve this? (Choose TWO)
 
-- [ ] Use Amazon Cognito to create a user pool and create users in the user pool.
+- [x] Use Amazon Cognito to create a user pool and create users in the user pool.
 - [ ] Send multi-factor authentication text codes to users with the Amazon SNS Publish API call in the app code.
 - [x] Enable multi-factor authentication for the Amazon Cognito user pool.
 - [ ] Use AWS IAM to create IAM users.
-- [x] Enable multi-factor authentication for the users created in AWS IAM.
+- [ ] Enable multi-factor authentication for the users created in AWS IAM.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -2158,9 +2157,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A Developer has code running on Amazon EC2 instances that needs read-only access to an Amazon DynamoDB table. What is the MOST secure approach the Developer should take to accomplish this task?
 
 - [ ] Create a user access key for each EC2 instance with read-only access to DynamoDB. Place the keys in the code. Redeploy the code as keys rotate.
-- [ ] Use an IAM role with an AmazonDynamoDBReadOnlyAccess policy applied to the EC2 instances.
+- [x] Use an IAM role with an AmazonDynamoDBReadOnlyAccess policy applied to the EC2 instances.
 - [ ] Run all code with only AWS account root user access keys to ensure maximum access to services.
-- [x] Use an IAM role with Administrator access applied to the EC2 instance.
+- [ ] Use an IAM role with Administrator access applied to the EC2 instance.
 
 **[⬆ Back to Top](#table-of-contents)**
 

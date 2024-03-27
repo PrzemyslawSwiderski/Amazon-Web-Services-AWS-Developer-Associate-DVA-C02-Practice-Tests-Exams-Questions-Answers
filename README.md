@@ -1736,8 +1736,8 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 - [ ] Double the Auto Scaling group's maximum number of servers.
 - [ ] Host the application code on AWS Lambda.
-- [x] Scale vertically by resizing the EC2 instances.
-- [ ] Create an Amazon CloudFront distribution to cache the static content.
+- [ ] Scale vertically by resizing the EC2 instances.
+- [x] Create an Amazon CloudFront distribution to cache the static content.
 - [x] Store the application's static content in Amazon S3.
 
 ### 203. A company is developing a web application that allows its employees to upload a profile picture to a private Amazon S3 bucket. There is no size limit for the profile pictures, which should be displayed every time an employee logs in. For security reasons, the pictures cannot be publicly accessible. What is a viable long-term solution for this scenario?

@@ -910,10 +910,10 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 102. A company is building a stock trading application that requires sub-millisecond latency in processing trading requests. Amazon DynamoDB is used to store all the trading data that is used to process each request. After load testing the application, the development team found that due to data retrieval times, the latency requirement is not satisfied. Because of sudden high spikes in the number of requests, DynamoDB read capacity has to be significantly over-provisioned to avoid throttling. What steps should be taken to meet latency requirements and reduce the cost of running the application?
 
-- [x] Add Global Secondary Indexes for trading data.
+- [ ] Add Global Secondary Indexes for trading data.
 - [ ] Store trading data in Amazon S3 and use Transfer Acceleration.
 - [ ] Add retries with exponential back-off for DynamoDB queries.
-- [ ] Use DynamoDB Accelerator to cache trading data.
+- [x] Use DynamoDB Accelerator to cache trading data.
 
 ### 103. A Developer created a Lambda function for a web application backend. When testing the Lambda function from the AWS Lambda console, the Developer can see that the function is being executed, but there is no log data being generated in Amazon CloudWatch Logs, even after several minutes. What could cause this situation?
 
@@ -922,7 +922,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [x] The execution role for the Lambda function is missing permissions to write log data to the CloudWatch Logs.
 - [ ] The Lambda function is missing a target CloudWatch Log group.
 
-### 104. A Developer wants to use AWS X-Ray to trace a user request end-to-end throughput the software stack. The Developer made the necessary changes in the application tested it, and found that the application is able to send the traces to AWS X-Ray. However, when the application is deployed to an EC2 instance, the traces are not availableWhich of the following could create this situation? (Choose TWO)
+### 104. A Developer wants to use AWS X-Ray to trace a user request end-to-end throughput the software stack. The Developer made the necessary changes in the application tested it, and found that the application is able to send the traces to AWS X-Ray. However, when the application is deployed to an EC2 instance, the traces are not available. Which of the following could create this situation? (Choose TWO)
 
 - [ ] The traces are reaching X-Ray, but the Developer does not have access to view the records.
 - [x] The X-Ray daemon is not installed on the EC2 instance.
@@ -1001,17 +1001,17 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 113. A company is adding stored value (or gift card) capability to its highly popular casual gaming website. Users need to be able to trade this value for other users' items on the platform. This would require both users' records be updated as a single transaction, or both users' records to be completely rolled back. Which AWS database options can provide the transactional capability required for this new feature? (Choose TWO)
 
 - [ ] Amazon DynamoDB with operations made with the ConsistentRead parameter set to true.
-- [x] Amazon ElastiCache for Memcached with operations made within a transaction block.
-- [ ] Amazon Aurora MySQL with operations made within a transaction block.
+- [ ] Amazon ElastiCache for Memcached with operations made within a transaction block.
+- [x] Amazon Aurora MySQL with operations made within a transaction block.
 - [x] Amazon DynamoDB with reads and writes made using Transact* operations.
 - [ ] Amazon Redshift with operations made within a transaction block.
 
 ### 114. A developer is creating an AWS Lambda function that generates a new file each time it runs. Each new file must be checked into an AWS CodeCommit repository hosted in the same AWS account. How should the developer accomplish this?
 
-- [x] When the Lambda function starts, use the Git CLI to clone the repository. Check the new file into the cloned
+- [ ] When the Lambda function starts, use the Git CLI to clone the repository. Check the new file into the cloned
   repository and push the change.
 - [ ] After the new file is created in Lambda, use cURL to invoke the CodeCommit API. Send the file to the repository.
-- [ ] Use an AWS SDK to instantiate a CodeCommit client. Invoke the put_file method to add the file to the repository.
+- [x] Use an AWS SDK to instantiate a CodeCommit client. Invoke the put_file method to add the file to the repository.
 - [ ] Upload the new to an Amazon S3 bucket. Create an AWS Step Function to accept S3 events. In the Step Function, add
   the new file to the repository.
 
@@ -1019,17 +1019,17 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 - [ ] Environment variables.
 - [ ] AWS credentials file.
-- [ ] Instance profile credentials.
-- [x] Command line options.
+- [x] Instance profile credentials.
+- [ ] Command line options.
 
 ### 116. A company has an application where reading objects from Amazon S3 is based on the type of user. The user types are registered user and guest user. The company has 25,000 users and is growing. Information is pulled from an S3 bucket depending on the user type. Which approaches are recommended to provide access to both user types? (Choose TWO)
 
-- [x] Provide a different access key and secret access key in the application code for registered users and guest users
+- [ ] Provide a different access key and secret access key in the application code for registered users and guest users
   to provide read access to the objects.
-- [x] Use S3 bucket policies to restrict read access to specific IAM users.
-- [ ] Use Amazon Cognito to provide access using authenticated and unauthenticated roles.
+- [ ] Use S3 bucket policies to restrict read access to specific IAM users.
+- [x] Use Amazon Cognito to provide access using authenticated and unauthenticated roles.
 - [ ] Create a new IAM user for each user and grant read access.
-- [ ] Use the AWS IAM service and let the application assume the different roles using the AWS Security Token Service (
+- [x] Use the AWS IAM service and let the application assume the different roles using the AWS Security Token Service (
   AWS STS) AssumeRole action depending on the type of user and provide read access to Amazon S3 using the assumed role.
 
 ### 117. A company has 25,000 employees and is growing. The company is creating an application that will be accessible to its employees only. A developer is using Amazon S3 to store images and Amazon RDS to store application data. The company requires that all employee information remain in the legacy Security Assertion Markup Language (SAML) employee directory only and is not interested in mirroring any employee information on AWS. How can the developer provide authorized access for the employees who will be using this application so each employee can access their own application data only?
@@ -1043,17 +1043,17 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 118. A company has developed a new serverless application using AWS Lambda functions that will be deployed using the AWS Serverless Application Model (AWS SAM) CLI. Which step should the developer complete prior to deploying the application?
 
-- [x] Compress the application to a .zip file and upload it into AWS Lambda.
+- [ ] Compress the application to a .zip file and upload it into AWS Lambda.
 - [ ] Test the new AWS Lambda function by first tracing it in AWS X-Ray.
-- [ ] Bundle the serverless application using a SAM package.
+- [x] Bundle the serverless application using a SAM package.
 - [ ] Create the application environment using the eb create my-env command.
 
 ### 119. An application needs to encrypt data that is written to Amazon S3 where the keys are managed in an on-premises data center, and the encryption is handled by S3. Which type of encryption should be used?
 
 - [ ] Use server-side encryption with Amazon S3-managed keys.
 - [ ] Use server-side encryption with AWS KMS-managed keys.
-- [x] Use client-side encryption with customer master keys.
-- [ ] Use server-side encryption with customer-provided keys.
+- [ ] Use client-side encryption with customer master keys.
+- [x] Use server-side encryption with customer-provided keys.
 
 ### 120. A development team is working on a mobile app that allows users to upload pictures to Amazon S3. The team expects the app will be used by hundreds of thousands of users during a single event simultaneously. Once the pictures are uploaded, the backend service will scan and parse the pictures for inappropriate content. Which approach is the MOST resilient way to achieve this goal, which also smooths out temporary volume spikes for the backend service?
 
@@ -1068,9 +1068,9 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 121. A development team wants to run their container workloads on Amazon ECS. Each application container needs to share data with another container to collect logs and metrics. What should the developer team do to meet these requirements?
 
-- [x] Create two pod specifications. Make one to include the application container and the other to include the other
+- [ ] Create two pod specifications. Make one to include the application container and the other to include the other
   container. Link the two pods together.
-- [ ] Create two task definitions. Make one to include the application container and the other to include the other
+- [x] Create two task definitions. Make one to include the application container and the other to include the other
   container. Mount a shared volume between the two tasks.
 - [ ] Create one task definition. Specify both containers in the definition. Mount a shared volume between those two
   containers.
@@ -1097,12 +1097,12 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [ ] Store the user name and password credentials directly in the source code. No further action is needed because the
   source code is stored in a private repository.
 
-### 124. A developer is updating an application deployed on AWS Elastic Beanstalk. The new version is incompatible with the old version. To successfully deploy the update, a full cutover to the new, updated version must be performed on all instances at one time, with the ability to roll back changes in case of a deployment failure in the new version. How can this be performed with the LEAST amount of downtime?
+### 124. A developer is updating an application deployed on AWS Elastic Beanstalk. The new version is incompatible with the old version. To successfully deploy the update, a full cut over to the new, updated version must be performed on all instances at one time, with the ability to roll back changes in case of a deployment failure in the new version. How can this be performed with the LEAST amount of downtime?
 
 - [ ] Use the Elastic Beanstalk All at once deployment policy to update all instances simultaneously.
 - [ ] Perform an Elastic Beanstalk Rolling with additional batch deployment.
-- [ ] Deploy the new version in a new Elastic Beanstalk environment and swap environment URLs.
-- [x] Perform an Elastic Beanstalk Rolling deployment.
+- [x] Deploy the new version in a new Elastic Beanstalk environment and swap environment URLs.
+- [ ] Perform an Elastic Beanstalk Rolling deployment.
 
 ### 125. A developer is writing a web application that must share secure documents with end users. The documents are stored in a private Amazon S3 bucket. The application must allow only authenticated users to download specific documents when requested, and only for a duration of 15 minutes. How can the developer meet these requirements?
 
@@ -1132,9 +1132,9 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ![Question 130](images/question130.jpg)
 
-- [ ] Add an Export declaration to the Outputs section of the original template and use ImportValue in other templates.
-- [ ] Add Exported: true to the Contentbucket in the original template and use ImportResource in other templates.
-- [x] Create a custom AWS CloudFormation resource that gets the bucket name from the ContentBucket resource of the first
+- [x] Add an Export declaration to the Outputs section of the original template and use ImportValue in other templates.
+- [ ] Add Exported: true to the ContentBucket in the original template and use ImportResource in other templates.
+- [ ] Create a custom AWS CloudFormation resource that gets the bucket name from the ContentBucket resource of the first
   stack.
 - [ ] Use Fn::Include to include the existing template in other templates and use the ContentBucket resource directly.
 
@@ -1148,19 +1148,19 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 130. A developer is using Amazon DynamoDB to store application data. The developer wants to further improve application performance by reducing response times for read and write operations. Which DynamoDB feature should be used to meet these requirements?
 
 - [ ] Amazon DynamoDB Streams.
-- [ ] Amazon DynamoDB Accelerator.
+- [x] Amazon DynamoDB Accelerator.
 - [ ] Amazon DynamoDB global tables.
-- [x] Amazon DynamoDB transactions.
+- [ ] Amazon DynamoDB transactions.
 
 ### 131. A developer is creating a script to automate the deployment process for a serverless application. The developer wants to use an existing AWS Serverless Application Model (AWS SAM) template for the application. What should the developer use for the project? (Choose TWO)
 
-- [ ] Call aws cloudformation package to create the deployment package. Call aws cloudformation deploy to deploy the
+- [x] Call aws cloudformation package to create the deployment package. Call aws cloudformation deploy to deploy the
   package afterward.
-- [ ] Call sam package to create the deployment package. Call sam deploy to deploy the package afterward.
-- [x] Call aws s3 cp to upload the AWS SAM template to Amazon S3. Call aws lambda update-function-code to create the
+- [x] Call sam package to create the deployment package. Call sam deploy to deploy the package afterward.
+- [ ] Call aws s3 cp to upload the AWS SAM template to Amazon S3. Call aws lambda update-function-code to create the
   application.
 - [ ] Create a ZIP package locally and call aws serverlessrepo create-application to create the application.
-- [x] Create a ZIP package and upload it to Amazon S3. Call aws cloudformation create-stack to create the application.
+- [ ] Create a ZIP package and upload it to Amazon S3. Call aws cloudformation create-stack to create the application.
 
 ### 132. A development team is designing a mobile app that requires multi-factor authentication. Which steps should be taken to achieve this? (Choose TWO)
 
@@ -1178,7 +1178,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [ ] Set ECS_ENABLE_TASK_IAM_ROLE to false on EC2 instance boot in the ECS agent configuration file. Grant the instance
   profile role read-only access to the Aurora database and DynamoDB.
 - [x] Set ECS_ENABLE_TASK_IAM_ROLE to true on EC2 instance boot in the ECS agent configuration file. Run the first
-  microservice with an IAM role for ECS tasks with read-only access for the Aurora database. Run the secondmicroservice
+  microservice with an IAM role for ECS tasks with read-only access for the Aurora database. Run the second microservice
   with an IAM role for ECS tasks with read-only access to DynamoDB.
 - [ ] Set ECS_ENABLE_TASK_IAM_ROLE to true on EC2 instance boot in the ECS agent configuration file. Grant the instance
   profile role read-only access to the Aurora database and DynamoDB.
@@ -1212,9 +1212,9 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 137. An IAM role is attached to an Amazon EC2 instance that explicitly denies access to all Amazon S3 API actions. The EC2 instance credentials file specifies the IAM access key and secret access key, which allow full administrative access. Given that multiple modes of IAM access are present for this EC2 instance, which of the following is correct?
 
-- [x] The EC2 instance will only be able to list the S3 buckets.
+- [ ] The EC2 instance will only be able to list the S3 buckets.
 - [ ] The EC2 instance will only be able to list the contents of one S3 bucket at a time.
-- [ ] The EC2 instance will be able to perform all actions on any S3 bucket.
+- [x] The EC2 instance will be able to perform all actions on any S3 bucket.
 - [ ] The EC2 instance will not be able to perform any S3 action on any S3 bucket.
 
 ### 138. A development team uses AWS Elastic Beanstalk for application deployment. The team has configured the application version lifecycle policy to limit the number of application versions to 25. However, even with the lifecycle policy, the source bundle is deleted from the Amazon S3 source bucket. What should a developer do in the Elastic Beanstalk application version lifecycle settings to retain the source code in the S3 bucket?
@@ -1243,8 +1243,8 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 - [ ] Send logs from the Lambda application to an S3 bucket; trigger a Lambda function from the bucket to send data to
   AWS X-Ray.
-- [x] Trigger a Lambda function from the application logs in Amazon CloudWatch to submit tracing data to AWS X-Ray.
-- [ ] Use an IAM execution role to give the Lambda function permissions and enable tracing.
+- [ ] Trigger a Lambda function from the application logs in Amazon CloudWatch to submit tracing data to AWS X-Ray.
+- [x] Use an IAM execution role to give the Lambda function permissions and enable tracing.
 - [ ] Update and add AWS X-Ray daemon code to relevant parts of the Lambda function to set up the trace.
 
 ### 142. A development team is building a new application that will run on Amazon EC2 and use Amazon DynamoDB as a storage layer. The developers all have assigned IAM user accounts in the same IAM group. The developers currently can launch EC2 instances, and they need to be able to launch EC2 instances with an instance role allowing access to Amazon DynamoDB. Which AWS IAM changes are needed when creating an instance role to provide this functionality?
@@ -1269,7 +1269,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [ ] Install the missing module in a lib directory. Create a ZIP file to include all files under the lib directory, and
   upload the ZIP file as dependency file.
 - [ ] In the Lambda code, invoke a Linux command to install the missing modules under the /usr/lib directory.
-- [x] In the Lambda console, create a LB_LIBRARY_PATH environment and specify the value for the system library plan.
+- [x] In the Lambda console, create a LD_LIBRARY_PATH environment variable and specify the value for the system library plan.
 
 ### 144. A front-end web application is using Amazon Cognito user pools to handle the user authentication flow. A developer is integrating Amazon DynamoDB into the application using the AWS SDK for JavaScript. How would the developer securely call the API without exposing the access or secret keys?
 
@@ -2001,7 +2001,6 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [ ] Write the data randomly instead of sequentially.
 - [x] Use an encrypted file system on top of the BBS volume.
 - [ ] Encrypt the volume using the S3 server-side encryption service.
-- [ ] Encrypt the volume using the S3 server-side encryption service.
 
 ### 237. Which of the following is chosen as the default region when making an API call with an AWS SDK?
 
@@ -2020,7 +2019,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [x] SWF uses deciders and workers to complete tasks.
 - [ ] SWF requires at least 1 EC2 instance per domain.
 
-### 239. A startup s photo-sharing site is deployed in a VPC. An ELB distributes web traffic across two subnets. ELB session stickiness is configured to use the AWSgenerated session cookie, with a session TTL of 5 minutes. The webserver Auto Scaling Group is configured as: min-size=4, max-size=4, The startups preparing for a public launch, by running load-testing software installed on a single EC2 instance running in us-west-2 After 60 minutes of load-testing, the webserver logs show: Which recommendations can help ensure load-testing HTTP requests are evenly distributed across the four webservers? (Choose TWO)
+### 239. A startup s photo-sharing site is deployed in a VPC. An ELB distributes web traffic across two subnets. ELB session stickiness is configured to use the AWS generated session cookie, with a session TTL of 5 minutes. The webserver Auto Scaling Group is configured as: min-size=4, max-size=4, The startups preparing for a public launch, by running load-testing software installed on a single EC2 instance running in us-west-2 After 60 minutes of load-testing, the webserver logs show: Which recommendations can help ensure load-testing HTTP requests are evenly distributed across the four webservers? (Choose TWO)
 
 - [ ] Launch and run the load-tester EC2 instance from us-east-1 instead.
 - [x] Re-configure the load-testing software to re-resolve DNS for each web request.
@@ -2219,7 +2218,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 265. A corporate web application is deployed within an Amazon VPC, and is connected to the corporate data center via IPSec VPN. The application must authenticate against the on-premise LDAP server. Once authenticated, logged-in users can only access an S3 keyspace specific to the user. Which two approaches can satisfy the objectives? (Choose TWO)
 
 - [ ] The application authenticates against LDAP. The application then calls the IAM Security Service to login to IAM
-  using the LDAP credentials. The application can use the 1AM temporary credentials to access the appropriate S3 bucket.
+  using the LDAP credentials. The application can use the IAM temporary credentials to access the appropriate S3 bucket.
 - [x] The application authenticates against LDAP, and retrieves the name of an IAM role associated with the user. The
   application then calls the IAM Security Token Service to assume that IAM Role. The application can use the temporary
   credentials to access the appropriate S3 bucket.
@@ -2698,9 +2697,9 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
   in the template.
 - [x] Create an AWS::Lambda::Function resource in the template, then write the code directly inside the CloudFormation
   template.
-- [ ] Upload a .ZIP file containing the function code to Amazon S3, then add a reference to it in an AWS::Lambda::
+- [x] Upload a .ZIP file containing the function code to Amazon S3, then add a reference to it in an AWS::Lambda::
   Function resource in the template.
-- [x] Upload a .ZIP file to AWS CloudFormation containing the function code, then add a reference to it in an AWS::
+- [ ] Upload a .ZIP file to AWS CloudFormation containing the function code, then add a reference to it in an AWS::
   Lambda::Function resource in the template.
 - [ ] Upload the function code to a private Git repository, then add a reference to it in an AWS::Lambda::Function
   resource in the template.

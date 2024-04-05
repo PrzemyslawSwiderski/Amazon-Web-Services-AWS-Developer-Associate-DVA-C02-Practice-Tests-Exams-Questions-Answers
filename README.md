@@ -1264,12 +1264,13 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 143. A developer converted an existing program to an AWS Lambda function in the console. The program runs properly on a local laptop, but shows an 'Unable to import module' error when tested in the Lambda console. Which of the following can fix the error?
 
-- [ ] Install the missing module and specify the current directory as the target. Create a ZIP file to include all files
+- [x] Install the missing module and specify the current directory as the target. Create a ZIP file to include all files
   under the current directory, and upload the ZIP file.
 - [ ] Install the missing module in a lib directory. Create a ZIP file to include all files under the lib directory, and
   upload the ZIP file as dependency file.
 - [ ] In the Lambda code, invoke a Linux command to install the missing modules under the /usr/lib directory.
-- [x] In the Lambda console, create a LD_LIBRARY_PATH environment variable and specify the value for the system library plan.
+- [ ] In the Lambda console, create a LD_LIBRARY_PATH environment variable and specify the value for the system library
+  plan.
 
 ### 144. A front-end web application is using Amazon Cognito user pools to handle the user authentication flow. A developer is integrating Amazon DynamoDB into the application using the AWS SDK for JavaScript. How would the developer securely call the API without exposing the access or secret keys?
 
@@ -1337,9 +1338,9 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 151. A Developer is migrating existing applications to AWS. These applications use MongoDB as their primary data store, and they will be deployed to Amazon EC2 instances. Management requires that the Developer minimize changes to applications while using AWS services. Which solution should the Developer use to host MongoDB in AWS?
 
 - [ ] Install MongoDB on the same instance where the application is running.
-- [ ] Deploy Amazon DocumentDB in MongoDB compatibility mode.
+- [x] Deploy Amazon DocumentDB in MongoDB compatibility mode.
 - [ ] Use Amazon API Gateway to translate API calls from MongoDB to Amazon DynamoDB.
-- [x] Replicate the existing MongoDB workload to Amazon DynamoDB.
+- [ ] Replicate the existing MongoDB workload to Amazon DynamoDB.
 
 ### 152. A company requires that AWS Lambda functions written by Developers log errors so System Administrators can more effectively troubleshoot issues. What should the Developers implement to meet this need?
 
@@ -1350,7 +1351,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 153. A Developer is writing an application that runs on Amazon EC2 instances in an Auto Scaling group. The application data is stored in an Amazon DynamoDB table and records are constantly updated by all instances. An instance sometimes retrieves old data. The Developer wants to correct this by making sure the reads are strongly consistent. How can the Developer accomplish this?
 
-- [x] Set ConsistentRead to true when calling Getltem.
+- [x] Set ConsistentRead to true when calling GetItem.
 - [ ] Create a new DynamoDB Accelerator (DAX) table.
 - [ ] Set Consistency to strong when calling UpdateTable.
 - [ ] Use the GetShardIterator command.
@@ -1371,8 +1372,8 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 156. A Developer has an Amazon DynamoDB table that must be in provisioned mode to comply with user requirements. The application needs to support the following: Average item size: 10 KB Item reads each second: 10 strongly consistent Item writes each second: 2 transactional Which read and write capacity cost-effectively meets these requirements?
 
-- [x] Read 10; write 2
-- [ ] Read 30; write 40
+- [ ] Read 10; write 2
+- [x] Read 30; write 40
 - [ ] Use on-demand scaling
 - [ ] Read 300; write 400
 
@@ -1400,14 +1401,14 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 160. A Company runs continuous integration/continuous delivery (CI/CD) pipelines for its application on AWS CodePipeline. A Developer must write unit tests and run them as part of the pipelines before staging the artifacts for testing. How should the Developer incorporate unit tests as part of CI/CD pipelines?
 
 - [ ] Create a separate CodePipeline pipeline to run unit tests.
-- [ ] Update the AWS CodeBuild specification to include a phase for running unit tests.
+- [x] Update the AWS CodeBuild specification to include a phase for running unit tests.
 - [ ] Install the AWS CodeDeploy agent on an Amazon EC2 instance to run unit tests.
-- [x] Create a testing branch in AWS CodeCommit to run unit tests.
+- [ ] Create a testing branch in AWS CodeCommit to run unit tests.
 
 ### 161. An application has the following requirements: Performance efficiency of seconds with up to a minute of latency. The data storage size may grow up to thousands of terabytes. Per-message sizes may vary between 100 KB and 100 MB. Data can be stored as key/value stores supporting eventual consistency. What is the MOST cost-effective AWS service to meet these requirements?
 
-- [x] Amazon DynamoDB.
-- [ ] Amazon S3.
+- [ ] Amazon DynamoDB.
+- [x] Amazon S3.
 - [ ] Amazon RDS (with a MySQL engine).
 - [ ] Amazon ElastiCache.
 
@@ -1428,12 +1429,11 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 164. A Developer has discovered that an application responsible for processing messages in an Amazon SQS queue is routinely falling behind. The application is capable of processing multiple messages in one execution, but is only receiving one message at a time. What should the Developer do to increase the number of messages the application receives?
 
 - [ ] Call the ChangeMessageVisibility API for the queue and set MaxNumberOfMessages to a value greater than the default
-  of '1.'
+  of `1`.
 - [ ] Call the AddPermission API to set MaxNumberOfMessages for the ReceiveMessage action to a value greater than the
-  default of '1.'
-- [x] Call the ReceiveMessage API to set MaxNumberOfMessages to a value greater than the default of '1.'
-- [ ] Call the SetQueueAttributes API for the queue and set MaxNumberOfMessages to a value greater than the default of '
-  1.'
+  default of `1`.
+- [x] Call the ReceiveMessage API to set MaxNumberOfMessages to a value greater than the default of `1`.
+- [ ] Call the SetQueueAttributes API for the queue and set MaxNumberOfMessages to a value greater than the default of `1`.
 
 ### 165. A Developer registered an AWS Lambda function as a target for an Application Load Balancer (ALB) using a CLI command. However, the Lambda function is not being invoked when the client sends requests through the ALB. Why is the Lambda function not being invoked?
 
@@ -1445,14 +1445,14 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 166. A company provides APIs as a service and commits to a service level agreement (SLA) with all its users. To comply with each SLA, what should the company do?
 
 - [ ] Enable throttling limits for each method in Amazon API Gateway.
-- [ ] Create a usage plan for each user and request API keys to access the APIs.
+- [x] Create a usage plan for each user and request API keys to access the APIs.
 - [ ] Enable API rate limiting in Amazon Cognito for each user.
-- [x] Enable default throttling limits for each stage after deploying the APIs.
+- [ ] Enable default throttling limits for each stage after deploying the APIs.
 
 ### 167. A Developer is preparing a deployment package using AWS CloudFormation. The package consists of two separate templates: one for the infrastructure and one for the application. The application has to be inside the VPC that is created from the infrastructure template. How can the application stack refer to the VPC created from the infrastructure template?
 
-- [x] Use the Ref function to import the VPC into the application stack from the infrastructure template.
-- [ ] Use the export flag in the infrastructure template, and then use the Fn::ImportValue function in the application
+- [ ] Use the Ref function to import the VPC into the application stack from the infrastructure template.
+- [x] Use the export flag in the infrastructure template, and then use the Fn::ImportValue function in the application
   template.
 - [ ] Use the DependsOn attribute to specify that the application instance depends on the VPC in the application
   template.
@@ -1461,8 +1461,8 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 168. A Developer needs to create an application that supports Security Assertion Markup Language (SAML) and Facebook authentication. It must also allow access to AWS services, such as Amazon DynamoDB. Which AWS service or feature will meet these requirements with the LEAST amount of additional coding?
 
 - [ ] AWS AppSync.
-- [ ] Amazon Cognito identity pools.
-- [x] Amazon Cognito user pools.
+- [x] Amazon Cognito identity pools.
+- [ ] Amazon Cognito user pools.
 - [ ] Amazon Lambda@Edge.
 
 ### 169. A Developer is trying to monitor an application's status by running a cron job that returns 1 if the service is up and 0 if the service is down. The Developer created code that uses an AWS CLI put-metric-alarm command to publish the custom metrics to Amazon CloudWatch and create an alarm. However, the Developer is unable to create an alarm as the custom metrics do not appear in the CloudWatch console. What is causing this issue?
@@ -1501,33 +1501,33 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 173. A Developer is writing an application in AWS Lambda. To simplify testing and deployments, the Developer needs the database connection string to be easily changed without modifying the Lambda code. How can this requirement be met?
 
-- [ ] Store the connection string as a secret in AWS Secrets Manager.
+- [x] Store the connection string as a secret in AWS Secrets Manager.
 - [ ] Store the connection string in an IAM user account.
-- [x] Store the connection string in AWS KMS.
+- [ ] Store the connection string in AWS KMS.
 - [ ] Store the connection string as a Lambda layer.
 
 ### 174. A company is launching an ecommerce website and will host the static data in Amazon S3. The company expects approximately 1,000 transactions per second (TPS) for GET and PUT requests in total. Logging must be enabled to track all requests and must be retained for auditing purposes. What is the MOST cost-effective solution?
 
 - [ ] Enable AWS CloudTrail logging for the S3 bucket-level action and create a lifecycle policy to move the data from
   the log bucket to Amazon S3 Glacier in 90 days.
-- [ ] Enable S3 server access logging and create a lifecycle policy to expire the data in 90 days.
-- [x] Enable AWS CloudTrail logging for the S3 bucket-level action and create a lifecycle policy to expire the data in
+- [x] Enable S3 server access logging and create a lifecycle policy to expire the data in 90 days.
+- [ ] Enable AWS CloudTrail logging for the S3 bucket-level action and create a lifecycle policy to expire the data in
   90 days.
 - [ ] Enable S3 server access logging and create a lifecycle policy to move the data to Amazon S3 Glacier in 90 days.
 
 ### 175. A Developer decides to store highly secure data in Amazon S3 and wants to implement server-side encryption (SSE) with granular control of who can access the master key. Company policy requires that the master key be created, rotated, and disabled easily when needed, all for security reasons. Which solution should be used to meet these requirements?
 
 - [ ] SSE with Amazon S3 managed keys (SSE-S3).
-- [ ] SSE with AWS KMS managed keys (SSE-KMS).
-- [x] SSE with AWS Secrets Manager.
+- [x] SSE with AWS KMS managed keys (SSE-KMS).
+- [ ] SSE with AWS Secrets Manager.
 - [ ] SSE with customer-provided encryption keys.
 
 ### 176. A Developer is migrating an on-premises application to AWS. The application currently takes user uploads and saves them to a local directory on the server. All uploads must be saved and made immediately available to all instances in an Auto Scaling group. Which approach will meet these requirements?
 
 - [ ] Use Amazon EBS and configure the application AMI to use a snapshot of the same EBS instance on boot.
-- [ ] Use Amazon S3 and rearchitect the application so all uploads are placed in S3.
+- [x] Use Amazon S3 and re-architect the application so all uploads are placed in S3.
 - [ ] Use instance storage and share it between instances launched from the same Amazon Machine Image (AMI).
-- [x] Use Amazon EBS and file synchronization software to achieve eventual consistency among the Auto Scaling group.
+- [ ] Use Amazon EBS and file synchronization software to achieve eventual consistency among the Auto Scaling group.
 
 ### 177. A Developer implemented a static website hosted in Amazon S3 that makes web service requests hosted in Amazon API Gateway and AWS Lambda. The site is showing an error that reads: 'No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.' What should the Developer do to resolve this issue?
 
@@ -1545,10 +1545,10 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 179. A Developer has written an Amazon Kinesis Data Streams application. As usage grows and traffic increases over time, the application is regularly receiving ProvisionedThroughputExceededException error messages. Which steps should the Developer take to resolve the error? (Choose TWO)
 
-- [ ] Use Auto Scaling to scale the stream for better performance.
+- [x] Use Auto Scaling to scale the stream for better performance.
 - [ ] Increase the delay between the GetRecords call and the PutRecords call.
 - [x] Increase the number of shards in the data stream.
-- [x] Specify a shard iterator using the ShardIterator parameter.
+- [ ] Specify a shard iterator using the ShardIterator parameter.
 - [ ] Implement exponential backoff on the GetRecords call and the PutRecords call.
 
 ### 180. A Developer is publishing critical log data to a log group in Amazon CloudWatch Logs, which was created 2 months ago. The Developer must encrypt the log data using an AWS KMS customer master key (CMK) so future data can be encrypted to comply with the company's security policy. How can the Developer meet this requirement?
@@ -1569,8 +1569,8 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 182. A Developer migrated a web application to AWS. As part of the migration, the Developer implemented an automated continuous integration/continuous improvement (CI/CD) process using a blue/green deployment. The deployment provisions new Amazon EC2 instances in an Auto Scaling group behind a new Application Load Balancer. After the migration was completed, the Developer began receiving complaints from users getting booted out of the system. The system also requires users to log in after every new deployment. How can these issues be resolved?
 
 - [ ] Use rolling updates instead of a blue/green deployment.
-- [ ] Externalize the user sessions to Amazon ElastiCache.
-- [x] Turn on sticky sessions in the Application Load Balancer.
+- [x] Externalize the user sessions to Amazon ElastiCache.
+- [ ] Turn on sticky sessions in the Application Load Balancer.
 - [ ] Use multicast to replicate session information.
 
 ### 183. A Developer wants to insert a record into an Amazon DynamoDB table as soon as a new file is added to an Amazon S3 bucket. Which set of steps would be necessary to achieve this?
@@ -1584,19 +1584,19 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 ### 184. A company has implemented AWS CodeDeploy as part of its cloud native CI/CD stack. The company enables automatic rollbacks while deploying a new version of a popular web application from in-place to Amazon EC2. What occurs if the deployment of the new version fails due to code regression?
 
 - [ ] The last known good deployment is automatically restored using the snapshot stored in Amazon S3.
-- [x] CodeDeploy switches the Amazon Route 53 alias records back to the known good green deployment and terminates the
+- [ ] CodeDeploy switches the Amazon Route 53 alias records back to the known good green deployment and terminates the
   failed blue deployment.
-- [ ] A new deployment of the last known version of the application is deployed with a new deployment ID.
+- [x] A new deployment of the last known version of the application is deployed with a new deployment ID.
 - [ ] AWS CodePipeline promotes the most recent deployment with a SUCCEEDED status to production.
 
 ### 185. A Developer uses Amazon S3 buckets for static website hosting. The Developer creates one S3 bucket for the code and another S3 bucket for the assets, such as image and video files. Access is denied when a user attempts to access the assets bucket from the code bucket, with the website application showing a 403 error. How should the Developer solve this issue?
 
 - [ ] Create an IAM role and apply it to the assets bucket for the code bucket to be granted access.
-- [x] Edit the bucket policy of the assets bucket to open access to all principals.
 - [ ] Edit the bucket policy of the assets bucket to open access to all principals.
+- [x] Edit the bucket policy of the assets bucket to allow access from the code bucket.
 - [ ] Change the code bucket to use AWS Lambda functions instead of static website hosting.
 
-### 186. A company has implemented AWS CodePipeline to automate its release pipelines. The Development team is writing an AWS Lambda function what will send notifications for state changes of each of the actions in the stages. Which steps must be taken to associate the Lambda function with the event source?
+### 186. A company has implemented AWS CodePipeline to automate its release pipelines. The Development team is writing an AWS Lambda function that will send notifications for state changes of each of the actions in the stages. Which steps must be taken to associate the Lambda function with the event source?
 
 - [ ] Create a trigger that invokes the Lambda function from the Lambda console by selecting CodePipeline as the event
   source.
@@ -1620,16 +1620,16 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 - [ ] Create an IAM user with read-only permissions for the S3 bucket. Temporarily store the user credentials in the
   Amazon EBS volume of the EC2 instance.
-- [x] Create an IAM user with read-only permissions for the S3 bucket. Temporarily store the user credentials in the
+- [ ] Create an IAM user with read-only permissions for the S3 bucket. Temporarily store the user credentials in the
   user data of the EC2 instance.
-- [ ] Create an EC2 service role with read-only permissions for the S3 bucket. Attach the role to the EC2 instance.
+- [x] Create an EC2 service role with read-only permissions for the S3 bucket. Attach the role to the EC2 instance.
 - [ ] Create an S3 service role with read-only permissions for the S3 bucket. Attach the role to the EC2 instance.
 
 ### 189. A Development team wants to immediately build and deploy an application whenever there is a change to the source code. Which approaches could be used to trigger the deployment? (Choose TWO)
 
-- [ ] Store the source code in an Amazon S3 bucket. Configure AWS CodePipeline to start whenever a file in the bucket
+- [x] Store the source code in an Amazon S3 bucket. Configure AWS CodePipeline to start whenever a file in the bucket
   changes.
-- [x] Store the source code in an encrypted Amazon EBS volume. Configure AWS CodePipeline to start whenever a file in
+- [ ] Store the source code in an encrypted Amazon EBS volume. Configure AWS CodePipeline to start whenever a file in
   the volume changes.
 - [x] Store the source code in an AWS CodeCommit repository. Configure AWS CodePipeline to start whenever a change is
   committed to the repository.
@@ -1663,10 +1663,10 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 193. A Developer is writing an application that will run on Amazon EC2 instances in an Auto Scaling group. The Developer wants to externalize session state to support the application. Which services will meet these needs? (Choose TWO)
 
-- [ ] Amazon DynamoDB.
-- [x] Amazon Cognito.
-- [ ] Amazon ElastiCache.
-- [x] Amazon EBS.
+- [x] Amazon DynamoDB.
+- [ ] Amazon Cognito.
+- [x] Amazon ElastiCache.
+- [ ] Amazon EBS.
 - [ ] Amazon SQS.
 
 ### 194. A Developer has a legacy application that is hosted on-premises. Other applications hosted on AWS depend on the on-premises application for proper functioning. In case of any application errors, the Developer wants to be able to use Amazon CloudWatch to monitor and troubleshoot all applications from one place. How can the Developer accomplish this?
@@ -1691,11 +1691,11 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 ### 196. A Developer is working on a serverless project based in Java. Initial testing shows a cold start takes about 8 seconds on average for AWS Lambda functions. What should the Developer do to reduce the cold start time? (Choose TWO)
 
-- [x] Add the Spring Framework to the project and enable dependency injection.
-- [ ] Reduce the deployment package by including only needed modules from the AWS SDK for Java.
-- [ ] Increase the memory allocation setting for the Lambda function.
+- [ ] Add the Spring Framework to the project and enable dependency injection.
+- [x] Reduce the deployment package by including only needed modules from the AWS SDK for Java.
+- [x] Increase the memory allocation setting for the Lambda function.
 - [ ] Increase the timeout setting for the Lambda function.
-- [x] Change the Lambda invocation mode from synchronous to asynchronous.
+- [ ] Change the Lambda invocation mode from synchronous to asynchronous.
 
 ### 197. A Developer is leveraging a Border Gateway Protocol (BGP)-based AWS VPN connection to connect from on-premises to Amazon EC2 instances in the Developer's account. The Developer is able to access an EC2 instance in subnet A, but is unable to access an EC2 instance in subnet B in the same VPC. Which logs can the Developer use to verify whether the traffic is reaching subnet B?
 
@@ -1704,7 +1704,7 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 - [x] VPC Flow Logs.
 - [ ] AWS CloudTrail logs.
 
-### 198. A Developer has created a new AWS IAM user that has s3 putObject permission to write to a specific Amazon S3 bucket. This S3 bucket uses server-side encryption with AWS KMS managed keys (SSE-KMS) as the default encryption. Using the access key and secret key of the IAM user, the application received an access denied error when calling the PutObject API. How can this issue be resolved?
+### 198. A Developer has created a new AWS IAM user that has S3 PutObject permission to write to a specific Amazon S3 bucket. This S3 bucket uses server-side encryption with AWS KMS managed keys (SSE-KMS) as the default encryption. Using the access key and secret key of the IAM user, the application received an access denied error when calling the PutObject API. How can this issue be resolved?
 
 - [ ] Update the policy of the IAM user to allow the s3 Encrypt action.
 - [ ] Update the bucket policy of the S3 bucket to allow the IAM user to upload objects.
@@ -1755,8 +1755,8 @@ an [issue](../../issues). Even better would be a [Pull Request (PR)](../../pulls
 
 - [ ] Deploy the function into multiple AWS Regions.
 - [ ] Deploy the function into multiple Availability Zones.
-- [x] Deploy the function using Lambda layers.
-- [ ] Deploy the function with its memory allocation set to the maximum amount.
+- [ ] Deploy the function using Lambda layers.
+- [x] Deploy the function with its memory allocation set to the maximum amount.
 
 ### 205. A company has a legacy application that was migrated to a fleet of Amazon EC2 instances. The application stores data in a MySQL database that is currently installed on a single EC2 instance. The company has decided to migrate the database from the EC2 instance to MySQL on Amazon RDS. What should the Developer do to update the application to support data storage in Amazon RDS?
 
